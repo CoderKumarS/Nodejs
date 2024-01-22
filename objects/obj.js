@@ -3,7 +3,7 @@ let car = {
     model:"Camry",
     year:2022,
     isElectric: false,
-    start:function () {
+    start:function () {  //ananomyous function with name
         console.log("Engine started!");
     }
 }
