@@ -1,4 +1,4 @@
-// Function Expression
+// Anomnimous Function Expression
 const multiply = function(a,b){
     return a*b;
 };
