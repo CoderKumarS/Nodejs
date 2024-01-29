@@ -1,5 +1,5 @@
-// Callback Function
-
+// anonymous function & arrow Function
+// in  Asynchronous Callback Function
 const parentFunction=(name, callback)=>{
     setTimeout(callback,1000);
     console.log("Hey "+name);
