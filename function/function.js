@@ -1,4 +1,4 @@
-// Anomnimous Function Expression
+// Anonymous Function Expression
 const multiply = function(a,b){
     return a*b;
 };
