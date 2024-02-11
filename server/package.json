@@ -1,0 +1,17 @@
+{
+  "name": "first-try-nodejs",
+  "version": "1.0.1",
+  "description": "This is a practice package where you can find sum basic function of node",
+  "main": "index.js",
+  "scripts": {
+    "test": "node"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "coderkumars",
+  "license": "ISC",
+  "dependencies": {
+    "prince_billa": "^1.0.0"
+  }
+}
