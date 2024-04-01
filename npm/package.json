@@ -1,0 +1,25 @@
+{
+  "name": "node-app",
+  "version": "1.0.0",
+  "description": "It is a test package created using npm for practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "practice"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoderKumarS/npm.git"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "CoderKumarS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CoderKumarS/npm/issues"
+  },
+  "homepage": "https://github.com/CoderKumarS/npm#readme",
+  "dependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
