@@ -8,7 +8,7 @@ const pool = new Pool({
     host: 'localhost',
     database: 'todos',
     password: 'root'
-});
+}); 
 app.use(express.json());
 app.get('/todos', (req, res) => {
     pool.query('SELECT * FROM todos', (error, result) => {
@@ -40,6 +40,17 @@ app.put('/todos/:id', (req, res) => {
             res.status(500).json({ error: 'Internal Server error' });
         } else {
             res.status(200).json({ message: 'Todo updated successfully' });
+        }
+    });
+});
+app.delete('/todos/:id', (req, res) => {
+    const {id} = req.params;
+    pool.query('DELETE FROM todos WHERE id = $1', [id], (error) => {
+        if (error) {
+            console.error("Error deleting todo", error);
+            res.status(500).json({ error: 'Internal Server error' });
+        } else {
+            res.status(200).json({ message: 'Deletion completed successfully' });
         }
     });
 });

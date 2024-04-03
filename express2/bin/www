@@ -9,17 +9,36 @@ var debug = require('debug')('express2:server');
 var http = require('http');
 
 /**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+/**
+ * Integrate Socket.IO with the HTTP server
+ */
+const socketio = require('socket.io');
+const io = socketio(server);
+
+io.on('connection', (socket) => {
+  console.log('A user connected');
+  
+  // Handle chat messages
+  socket.on('chat message', (msg) => {
+    io.emit('chat message', msg);
+  });
+
+  socket.on('disconnect', () => {
+    console.log('User disconnected');
+  });
+});
+
+/**
  * Get port from environment and store in Express.
  */
 
 var port = normalizePort(process.env.PORT || '3000');
 app.set('port', port);
-
-/**
- * Create HTTP server.
- */
-
-var server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
