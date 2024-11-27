@@ -1,0 +1,23 @@
+### Check all data in database ###
+GET http://localhost:3000/todos
+
+### Add data in database ###
+POST http://localhost:3000/todos
+Content-Type: application/json
+
+{
+    "title": "Test",
+    "completed": false
+}
+
+### Update data in database ###
+PUT http://localhost:3000/todos/15
+Content-Type: application/json
+
+{
+    "title": "Test",
+    "completed": true
+}
+
+### Delete data in database ###
+DELETE  http://localhost:3000/todos/15
